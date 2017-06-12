@@ -1,7 +1,5 @@
 package rogeriogentil.cditest.service;
 
-import java.util.ResourceBundle;
-import org.apache.log4j.Logger;
 import rogeriogentil.cditest.util.FactoryClass;
 
 /**

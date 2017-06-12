@@ -1,5 +1,6 @@
 package rogeriogentil.cditest;
 
+import rogeriogentil.cditest.domain.Cargo;
 import rogeriogentil.cditest.domain.Escolaridade;
 import rogeriogentil.cditest.domain.Funcionario;
 import rogeriogentil.cditest.service.CalculadoraDeSalarios;
@@ -14,6 +15,7 @@ public class App {
     public static void main(String[] args) {
         Funcionario funcionario = new Funcionario();
         funcionario.setEscolaridade(Escolaridade.SUPERIOR);
+        funcionario.setCargo(new Cargo());
         
         CalculadoraDeSalarios calculadora = CalculadoraDeSalariosFactory.criarCalculadora();
         double salario = calculadora.calcularSalario(funcionario);
