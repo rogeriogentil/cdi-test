@@ -6,6 +6,7 @@ import rogeriogentil.cditest.domain.Funcionario;
 import rogeriogentil.cditest.service.CalculadoraDeIRPF;
 import rogeriogentil.cditest.service.CalculadoraDeIRPF2013;
 import rogeriogentil.cditest.service.CalculadoraDeSalarios;
+import rogeriogentil.cditest.service.CalculadoraDeSalarios2017;
 import rogeriogentil.cditest.service.CalculadoraDeSalariosFactory;
 
 /**
@@ -24,7 +25,7 @@ public class App {
         
         System.out.println("Salário: " + salario);
         
-        CalculadoraDeIRPF calculadoraIRPF = new CalculadoraDeIRPF2013();
+        CalculadoraDeIRPF calculadoraIRPF = new CalculadoraDeIRPF2013(new CalculadoraDeSalarios2017());
         double imposto = calculadoraIRPF.calcularImpostoDeRenda(funcionario);
         
         System.out.println("IRPF: " + imposto);

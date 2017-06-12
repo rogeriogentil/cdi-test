@@ -8,9 +8,16 @@ import rogeriogentil.cditest.domain.Funcionario;
  */
 public class CalculadoraDeIRPF2013 implements CalculadoraDeIRPF {
 
+    private CalculadoraDeSalarios calculadora;
+
+    public CalculadoraDeIRPF2013(CalculadoraDeSalarios calculadora) {
+        this.calculadora = calculadora;
+    }
+    
+    
     @Override
     public double calcularImpostoDeRenda(Funcionario funcionario) {
-        CalculadoraDeSalarios calculadora = CalculadoraDeSalariosFactory.criarCalculadora();
+        calculadora = CalculadoraDeSalariosFactory.criarCalculadora();
         double salario = calculadora.calcularSalario(funcionario);
 
         // Tabela de IR de 2013
