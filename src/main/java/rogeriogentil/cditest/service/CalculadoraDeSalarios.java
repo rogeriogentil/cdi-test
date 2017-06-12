@@ -10,4 +10,5 @@ public interface CalculadoraDeSalarios {
     
     double calcularSalario(Funcionario funcionario);
     
+    void setTabelaDeReferenciaSalarial(TabelaDeReferenciaSalarial tabela);
 }

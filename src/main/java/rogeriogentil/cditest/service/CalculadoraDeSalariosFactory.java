@@ -9,6 +9,11 @@ package rogeriogentil.cditest.service;
 public class CalculadoraDeSalariosFactory {
     
     public static CalculadoraDeSalarios criarCalculadora() {
-        return new CalculadoraDeSalarios2017();
+        TabelaDeReferenciaSalarial pisosSalariais = new TabelaDeReferenciaSalarialPadrao();
+        
+        CalculadoraDeSalarios calculadora = new CalculadoraDeSalarios2017();        
+        calculadora.setTabelaDeReferenciaSalarial(pisosSalariais);
+        
+        return calculadora;
     }
 }
